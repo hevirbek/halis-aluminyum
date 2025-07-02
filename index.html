@@ -292,7 +292,7 @@
       <!-- SLIDER -->
       <section
         class="relative overflow-hidden"
-        x-data="{ slide: 0, slides: ['/assets/images/slider1.jpg', '/assets/images/slider2.jpg', '/assets/images/slider3.jpeg'] }"
+        x-data="{ slide: 0, slides: ['assets/images/slider1.jpg', 'assets/images/slider2.jpg', 'assets/images/slider3.jpeg'] }"
         x-init="setInterval(() => slide = (slide + 1) % slides.length, 4000)"
       >
         <template x-for="(url, index) in slides" :key="index">
