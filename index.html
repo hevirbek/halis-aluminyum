@@ -22,7 +22,7 @@
       property="og:description"
       content="Profesyonel alüminyum doğrama ve cephe kaplama sistemleri. Kaliteli çözümlerle yanınızdayız."
     />
-    <meta property="og:image" content="/assets/images/og-image.jpg" />
+    <meta property="og:image" content="assets/images/og-image.jpg" />
     <meta property="og:url" content="https://yourwebsite.com" />
     <meta property="og:type" content="website" />
 
@@ -101,7 +101,7 @@
     <header class="bg-white shadow" x-data="{ mobileMenu: false }">
       <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
         <!-- Logo -->
-        <a href="/" class="flex flex-col leading-tight">
+        <a href="index.html" class="flex flex-col leading-tight">
           <span class="text-2xl font-bold tracking-widest">halis</span>
           <span class="text-xs text-gray-500"
             >Alüminyum Doğrama Sistemleri</span
@@ -114,7 +114,7 @@
           x-data="{ open: false }"
           @mouseleave="open = false"
         >
-          <a href="/" class="hover:text-blue-600">Ana Sayfa</a>
+          <a href="index.html" class="hover:text-blue-600">Ana Sayfa</a>
 
           <!-- Ürünler dropdown -->
           <div
@@ -123,7 +123,7 @@
             @mouseleave="open = false"
           >
             <a
-              href="/urunler/"
+              href="urunler/index.html"
               class="hover:text-blue-600 flex items-center cursor-pointer select-none"
             >
               Ürünler
@@ -151,55 +151,55 @@
               @mouseleave="open = false"
             >
               <a
-                href="/urunler/aluminyum-pencere-ve-kapi.html"
+                href="urunler/aluminyum-pencere-ve-kapi.html"
                 class="block px-4 py-2 hover:bg-blue-100"
                 >Alüminyum Pencere & Kapı</a
               >
               <a
-                href="/urunler/cam-balkon.html"
+                href="urunler/cam-balkon.html"
                 class="block px-4 py-2 hover:bg-blue-100"
                 >Cam Balkon</a
               >
               <a
-                href="/urunler/firatpen-pencere-ve-kapi.html"
+                href="urunler/firatpen-pencere-ve-kapi.html"
                 class="block px-4 py-2 hover:bg-blue-100"
                 >Fıratpen Pencere & Kapı</a
               >
               <a
-                href="/urunler/giyotin-cam-sistemleri.html"
+                href="urunler/giyotin-cam-sistemleri.html"
                 class="block px-4 py-2 hover:bg-blue-100"
                 >Giyotin Cam Sistemleri</a
               >
               <a
-                href="/urunler/golgelendirme-sistemleri.html"
+                href="urunler/golgelendirme-sistemleri.html"
                 class="block px-4 py-2 hover:bg-blue-100"
                 >Gölgelendirme Sistemleri</a
               >
               <a
-                href="/urunler/korkuluk-sistemleri.html"
+                href="urunler/korkuluk-sistemleri.html"
                 class="block px-4 py-2 hover:bg-blue-100"
                 >Korkuluk Sistemleri</a
               >
               <a
-                href="/urunler/otomatik-kepenk.html"
+                href="urunler/otomatik-kepenk.html"
                 class="block px-4 py-2 hover:bg-blue-100"
                 >Otomatik Kepenk</a
               >
               <a
-                href="/urunler/pergola-sistemleri.html"
+                href="urunler/pergola-sistemleri.html"
                 class="block px-4 py-2 hover:bg-blue-100"
                 >Pergola Sistemleri</a
               >
               <a
-                href="/urunler/sineklik.html"
+                href="urunler/sineklik.html"
                 class="block px-4 py-2 hover:bg-blue-100"
                 >Sineklik</a
               >
             </div>
           </div>
 
-          <a href="/about.html" class="hover:text-blue-600">Hakkımızda</a>
-          <a href="/contact.html" class="hover:text-blue-600">İletişim</a>
+          <a href="about.html" class="hover:text-blue-600">Hakkımızda</a>
+          <a href="contact.html" class="hover:text-blue-600">İletişim</a>
         </nav>
 
         <!-- Mobile menu button -->
@@ -232,7 +232,9 @@
         x-data="{ mobileDropdown: false }"
       >
         <nav class="bg-white border-t px-4 py-2">
-          <a href="/" class="block py-2 hover:text-blue-600">Ana Sayfa</a>
+          <a href="index.html" class="block py-2 hover:text-blue-600"
+            >Ana Sayfa</a
+          >
 
           <!-- Mobile Ürünler dropdown -->
           <div class="relative">
@@ -259,27 +261,27 @@
 
             <div x-show="mobileDropdown" x-transition class="pl-4 pb-2">
               <a
-                href="/urunler/cift-kanatli-kapi.html"
+                href="urunler/cift-kanatli-kapi.html"
                 class="block py-2 text-sm hover:text-blue-600"
                 >Çift Kanatlı Kapı</a
               >
               <a
-                href="/urunler/korkuluk-sistemi.html"
+                href="urunler/korkuluk-sistemi.html"
                 class="block py-2 text-sm hover:text-blue-600"
                 >Korkuluk Sistemi</a
               >
               <a
-                href="/urunler/cam-balkon.html"
+                href="urunler/cam-balkon.html"
                 class="block py-2 text-sm hover:text-blue-600"
                 >Cam Balkon</a
               >
             </div>
           </div>
 
-          <a href="/about.html" class="block py-2 hover:text-blue-600"
+          <a href="about.html" class="block py-2 hover:text-blue-600"
             >Hakkımızda</a
           >
-          <a href="/contact.html" class="block py-2 hover:text-blue-600"
+          <a href="contact.html" class="block py-2 hover:text-blue-600"
             >İletişim</a
           >
         </nav>
@@ -331,7 +333,7 @@
           <div class="grid md:grid-cols-2 gap-10 items-center">
             <div class="text-center">
               <img
-                src="/assets/images/slider1.jpg"
+                src="assets/images/slider1.jpg"
                 alt="Misyon"
                 class="mx-auto mb-4 rounded-lg shadow-md w-full max-w-xs"
                 loading="lazy"
@@ -345,7 +347,7 @@
             </div>
             <div class="text-center">
               <img
-                src="/assets/images/slider1.jpg"
+                src="assets/images/slider1.jpg"
                 alt="Vizyon"
                 class="mx-auto mb-4 rounded-lg shadow-md w-full max-w-xs"
                 loading="lazy"
@@ -367,7 +369,7 @@
         >
           <div>
             <img
-              src="/assets/images/slider1.jpg"
+              src="assets/images/slider1.jpg"
               alt="Hakkımızda"
               class="w-full rounded-lg shadow-md"
               loading="lazy"
