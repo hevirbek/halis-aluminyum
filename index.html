@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HALİS Alüminyum | Ana Sayfa</title>
+    <meta
+      name="description"
+      content="HALİS Alüminyum Doğrama ve Cephe Kaplama Sistemleri - Kaliteli çözümlerle yanınızdayız."
+    />
+    <meta
+      name="keywords"
+      content="alüminyum doğrama, cephe kaplama, cam balkon, korkuluk sistemi, çift kanatlı kapı"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="HALİS Alüminyum | Kaliteli Alüminyum Çözümleri"
+    />
+    <meta
+      property="og:description"
+      content="Profesyonel alüminyum doğrama ve cephe kaplama sistemleri. Kaliteli çözümlerle yanınızdayız."
+    />
+    <meta property="og:image" content="/assets/images/og-image.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="HALİS Alüminyum | Kaliteli Alüminyum Çözümleri"
+    />
+    <meta
+      name="twitter:description"
+      content="Profesyonel alüminyum doğrama ve cephe kaplama sistemleri."
+    />
+
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Tailwind + Google Font -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Alpine.js for slider & menu -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link
+      rel="preload"
+      as="script"
+      href="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    />
+  </head>
+
+  <body
+    class="font-sans text-gray-800"
+    x-data="{ showScrollTop: false, topBarVisible: false }"
+    @scroll.window="showScrollTop = window.pageYOffset > 300"
+    x-init="setTimeout(() => topBarVisible = true, 200)"
+  >
+    <a href="#main" class="sr-only focus:not-sr-only p-2">İçeriğe atla</a>
+    <!-- TOP BAR -->
+    <div
+      class="bg-gray-800 text-white text-sm py-2"
+      x-show="topBarVisible"
+      x-transition:enter="transition ease-out duration-500"
+      x-transition:enter-start="-translate-y-full"
+      x-transition:enter-end="translate-y-0"
+      style="display: none"
+    >
+      <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <span>📞 +90 532 632 93 79</span>
+          <span>✉️ halisaluminyum@gmail.com</span>
+        </div>
+        <div class="hidden md:block">
+          <span>🕒 Pazartesi - Cuma: 08:00 - 18:00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="bg-white shadow" x-data="{ mobileMenu: false }">
+      <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <!-- Logo -->
+        <a href="/" class="flex flex-col leading-tight">
+          <span class="text-2xl font-bold tracking-widest">halis</span>
+          <span class="text-xs text-gray-500"
+            >Alüminyum Doğrama Sistemleri</span
+          >
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav
+          class="hidden md:flex space-x-6 text-sm font-medium"
+          x-data="{ open: false }"
+          @mouseleave="open = false"
+        >
+          <a href="/" class="hover:text-blue-600">Ana Sayfa</a>
+
+          <!-- Ürünler dropdown -->
+          <div
+            class="relative"
+            @mouseenter="open = true"
+            @mouseleave="open = false"
+          >
+            <a
+              href="/urunler/"
+              class="hover:text-blue-600 flex items-center cursor-pointer select-none"
+            >
+              Ürünler
+              <svg
+                class="ml-1 w-4 h-4 inline-block"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <!-- Dropdown menü -->
+            <div
+              x-show="open"
+              x-transition
+              class="absolute top-full left-0 mt-1 bg-white shadow-md rounded-md py-2 w-48 z-50"
+              style="display: none"
+              @mouseenter="open = true"
+              @mouseleave="open = false"
+            >
+              <a
+                href="/urunler/aluminyum-pencere-ve-kapi.html"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >Alüminyum Pencere & Kapı</a
+              >
+              <a
+                href="/urunler/cam-balkon.html"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >Cam Balkon</a
+              >
+              <a
+                href="/urunler/firatpen-pencere-ve-kapi.html"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >Fıratpen Pencere & Kapı</a
+              >
+              <a
+                href="/urunler/giyotin-cam-sistemleri.html"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >Giyotin Cam Sistemleri</a
+              >
+              <a
+                href="/urunler/golgelendirme-sistemleri.html"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >Gölgelendirme Sistemleri</a
+              >
+              <a
+                href="/urunler/korkuluk-sistemleri.html"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >Korkuluk Sistemleri</a
+              >
+              <a
+                href="/urunler/otomatik-kepenk.html"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >Otomatik Kepenk</a
+              >
+              <a
+                href="/urunler/pergola-sistemleri.html"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >Pergola Sistemleri</a
+              >
+              <a
+                href="/urunler/sineklik.html"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >Sineklik</a
+              >
+            </div>
+          </div>
+
+          <a href="/about.html" class="hover:text-blue-600">Hakkımızda</a>
+          <a href="/contact.html" class="hover:text-blue-600">İletişim</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          class="md:hidden"
+          @click="mobileMenu = !mobileMenu"
+          aria-label="Mobil Menüyü Aç/Kapa"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden"
+        x-show="mobileMenu"
+        @click.away="mobileMenu = false"
+        x-data="{ mobileDropdown: false }"
+      >
+        <nav class="bg-white border-t px-4 py-2">
+          <a href="/" class="block py-2 hover:text-blue-600">Ana Sayfa</a>
+
+          <!-- Mobile Ürünler dropdown -->
+          <div class="relative">
+            <button
+              @click="mobileDropdown = !mobileDropdown"
+              class="w-full text-left py-2 hover:text-blue-600 flex items-center justify-between"
+            >
+              Ürünler
+              <svg
+                class="w-4 h-4 transition-transform"
+                :class="mobileDropdown ? 'rotate-180' : ''"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <div x-show="mobileDropdown" x-transition class="pl-4 pb-2">
+              <a
+                href="/urunler/cift-kanatli-kapi.html"
+                class="block py-2 text-sm hover:text-blue-600"
+                >Çift Kanatlı Kapı</a
+              >
+              <a
+                href="/urunler/korkuluk-sistemi.html"
+                class="block py-2 text-sm hover:text-blue-600"
+                >Korkuluk Sistemi</a
+              >
+              <a
+                href="/urunler/cam-balkon.html"
+                class="block py-2 text-sm hover:text-blue-600"
+                >Cam Balkon</a
+              >
+            </div>
+          </div>
+
+          <a href="/about.html" class="block py-2 hover:text-blue-600"
+            >Hakkımızda</a
+          >
+          <a href="/contact.html" class="block py-2 hover:text-blue-600"
+            >İletişim</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- SLIDER -->
+      <section
+        class="relative overflow-hidden"
+        x-data="{ slide: 0, slides: ['/assets/images/slider1.jpg', '/assets/images/slider2.jpg', '/assets/images/slider3.jpeg'] }"
+        x-init="setInterval(() => slide = (slide + 1) % slides.length, 4000)"
+      >
+        <template x-for="(url, index) in slides" :key="index">
+          <div
+            x-show="slide === index"
+            class="w-full h-[400px] bg-cover bg-center transition-all duration-700"
+            :style="`background-image: url(${url})`"
+          >
+            <div
+              class="w-full h-full bg-black bg-opacity-40 flex items-center justify-center"
+            >
+              <h1 class="text-white text-4xl md:text-5xl font-bold text-center">
+                Kaliteli Alüminyum Çözümleri
+              </h1>
+            </div>
+          </div>
+        </template>
+
+        <!-- Slider Dots -->
+        <div class="flex justify-center mt-4 space-x-2">
+          <template x-for="(_, index) in slides" :key="index">
+            <button
+              @click="slide = index"
+              class="w-3 h-3 rounded-full transition-colors duration-200"
+              :class="slide === index ? 'bg-blue-600' : 'bg-gray-300'"
+              aria-label="Slayt değiştir"
+            ></button>
+          </template>
+        </div>
+      </section>
+
+      <!-- MİSYON & VİZYON -->
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4">
+          <h2 class="text-2xl font-bold text-center mb-10">
+            Misyonumuz ve Vizyonumuz
+          </h2>
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div class="text-center">
+              <img
+                src="/assets/images/slider1.jpg"
+                alt="Misyon"
+                class="mx-auto mb-4 rounded-lg shadow-md w-full max-w-xs"
+                loading="lazy"
+              />
+              <h3 class="text-xl font-semibold mb-2">Misyonumuz</h3>
+              <p class="text-gray-600">
+                Müşterilerimize yüksek kaliteli alüminyum doğrama ve cephe
+                sistemleri sunmak; sektörde güvenilir, yenilikçi ve
+                sürdürülebilir çözümler üretmek.
+              </p>
+            </div>
+            <div class="text-center">
+              <img
+                src="/assets/images/slider1.jpg"
+                alt="Vizyon"
+                class="mx-auto mb-4 rounded-lg shadow-md w-full max-w-xs"
+                loading="lazy"
+              />
+              <h3 class="text-xl font-semibold mb-2">Vizyonumuz</h3>
+              <p class="text-gray-600">
+                Yenilikçi yaklaşımlar ve müşteri odaklı hizmet anlayışıyla,
+                global ölçekte tanınan ve tercih edilen bir marka olmak.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HAKKIMIZDA -->
+      <section class="py-20">
+        <div
+          class="max-w-6xl mx-auto px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center"
+        >
+          <div>
+            <img
+              src="/assets/images/slider1.jpg"
+              alt="Hakkımızda"
+              class="w-full rounded-lg shadow-md"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold mb-4">Hakkımızda</h2>
+            <p class="text-gray-600">
+              HALİS Alüminyum, müşteri memnuniyetini ön planda tutarak, yılların
+              deneyimiyle kaliteli ve estetik çözümler üretmektedir.
+              Projelerinizde güvenilir bir iş ortağı olarak yanınızdayız.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- HİZMETLERİMİZ -->
+      <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-20">
+            Neden HALİS Alüminyum?
+          </h2>
+          <div class="grid lg:grid-cols-3 gap-16">
+            <div
+              class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 space-y-4"
+            >
+              <div
+                class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold">Kalite Garantisi</h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Yüksek kaliteli malzemeler ve titiz işçilik ile uzun ömürlü
+                çözümler sunuyoruz.
+              </p>
+            </div>
+
+            <div
+              class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 space-y-4"
+            >
+              <div
+                class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold">Hızlı Teslimat</h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Zamanında ve eksiksiz teslimat ile projelerinizin programında
+                kalmasını sağlıyoruz.
+              </p>
+            </div>
+
+            <div
+              class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 space-y-4"
+            >
+              <div
+                class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-purple-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold">Profesyonel Destek</h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Uzman ekibimizle projeden teslimata kadar tam destek sağlıyoruz.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MÜŞTERİ YORUMLARI -->
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">
+            Müşteri Yorumları
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Yorum kartları -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-400 flex">
+                  <!-- 5 yıldız -->
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    ></path>
+                  </svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    ></path>
+                  </svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    ></path>
+                  </svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    ></path>
+                  </svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                "HALİS Alüminyum ile çalışmak harika bir deneyimdi. Profesyonel
+                ekip ve kaliteli ürünler."
+              </p>
+              <p class="font-semibold">Hüseyin Averbek <br />Mersin/AKDENİZ</p>
+            </div>
+            <!-- Diğer yorumlar -->
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="bg-gray-800 text-white py-6">
+        <div
+          class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm"
+        >
+          <p>&copy; 2025 HALİS Alüminyum. Tüm hakları saklıdır.</p>
+          <div class="flex items-center space-x-4 mt-2 md:mt-0">
+            <a
+              href="https://instagram.com/halisaluminyum"
+              target="_blank"
+              class="hover:text-pink-400 flex items-center space-x-1"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.5a1 1 0 11-2 0 1 1 0 012 0z"
+                />
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Scroll to Top Button -->
+      <button
+        x-show="showScrollTop"
+        x-transition
+        @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+        class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 15l7-7 7 7"
+          ></path>
+        </svg>
+      </button>
+    </main>
+    <!-- WhatsApp Butonu -->
+    <!-- <a
+      href="https://wa.me/905326329379?text=Merhaba%20HALİS%20Alüminyum,%20size%20ulaşmak%20istiyorum."
+      target="_blank"
+      class="fixed bottom-4 left-4 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
+      aria-label="WhatsApp ile iletişime geçin"
+    >
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M20.52 3.48A11.78 11.78 0 0012 0a11.78 11.78 0 00-8.52 3.48A11.78 11.78 0 000 12c0 2.13.56 4.2 1.63 6.02L0 24l6.14-1.6A11.91 11.91 0 0012 24a11.78 11.78 0 008.52-3.48A11.78 11.78 0 0024 12a11.78 11.78 0 00-3.48-8.52zM12 22a9.9 9.9 0 01-5.1-1.39l-.37-.22-3.64.95.98-3.55-.24-.37A9.91 9.91 0 012 12a9.93 9.93 0 012.93-7.07A9.93 9.93 0 0112 2a9.93 9.93 0 007.07 2.93A9.93 9.93 0 0122 12a9.93 9.93 0 01-2.93 7.07A9.93 9.93 0 0112 22zm5.28-7.4l-1.7-.8c-.23-.11-.5-.05-.68.13l-.9.91a7.32 7.32 0 01-3.35-3.35l.91-.9c.18-.18.24-.45.13-.68l-.8-1.7a.61.61 0 00-.7-.34 5.7 5.7 0 00-1.79.88 1.43 1.43 0 00-.61 1.14c0 .27.06.55.18.8a10.1 10.1 0 004.43 4.43c.25.12.52.18.8.18a1.43 1.43 0 001.14-.61 5.7 5.7 0 00.88-1.79.61.61 0 00-.34-.7z"
+        />
+      </svg>
+    </a> -->
+
+    <a
+      href="https://wa.me/905326329379?text=Merhaba%20HALİS%20Alüminyum,%20size%20ulaşmak%20istiyorum."
+      target="_blank"
+      class="fixed bottom-4 left-4 z-50 hover:scale-110 transition-transform duration-300 hover:shadow-lg"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="60"
+        height="60"
+        viewBox="0 0 80 80"
+      >
+        <path
+          fill="#f2faff"
+          d="M7.904,58.665L7.8,58.484c-3.263-5.649-4.986-12.102-4.983-18.66 C2.826,19.244,19.577,2.5,40.157,2.5C50.14,2.503,59.521,6.391,66.57,13.446C73.618,20.5,77.5,29.879,77.5,39.855 c-0.01,20.583-16.76,37.328-37.34,37.328c-6.247-0.003-12.418-1.574-17.861-4.543l-0.174-0.096L2.711,77.636L7.904,58.665z"
+        ></path>
+        <path
+          fill="#788b9c"
+          d="M40.157,3L40.157,3c9.85,0.003,19.105,3.838,26.059,10.799C73.17,20.76,77,30.013,77,39.855 c-0.009,20.307-16.536,36.828-36.855,36.828c-6.149-0.003-12.237-1.553-17.606-4.482l-0.349-0.19l-0.384,0.101l-18.384,4.82 l4.91-17.933l0.11-0.403l-0.209-0.362c-3.22-5.574-4.92-11.94-4.917-18.41C3.326,19.52,19.852,3,40.157,3 M40.157,2 C19.302,2,2.326,18.969,2.317,39.824C2.313,46.49,4.055,53,7.367,58.735L2,78.339l20.06-5.26 c5.526,3.015,11.751,4.601,18.084,4.604h0.016c20.855,0,37.831-16.969,37.84-37.827c0-10.108-3.933-19.613-11.077-26.764 C59.78,5.942,50.28,2.003,40.157,2L40.157,2z"
+        ></path>
+        <path
+          fill="#79ba7e"
+          d="M39.99,70c-5.009-0.003-9.965-1.263-14.332-3.646l-2.867-1.564l-3.159,0.828l-6.482,1.699	l1.659-6.061l0.907-3.312l-1.718-2.974C11.38,50.437,9.997,45.255,10,39.986C10.007,23.453,23.464,10.002,39.997,10	c8.022,0.003,15.558,3.126,21.221,8.793C66.881,24.461,70,31.998,70,40.011C69.992,56.547,56.535,70,39.99,70z"
+        ></path>
+        <path
+          fill="#fff"
+          d="M56.561,47.376c-0.9-0.449-5.321-2.626-6.143-2.924c-0.825-0.301-1.424-0.449-2.023,0.449	c-0.599,0.9-2.322,2.924-2.845,3.523c-0.524,0.599-1.048,0.674-1.948,0.226c-0.9-0.449-3.797-1.4-7.23-4.462	c-2.674-2.382-4.478-5.327-5.001-6.227c-0.524-0.9-0.057-1.385,0.394-1.834c0.403-0.403,0.9-1.051,1.349-1.575	c0.449-0.524,0.599-0.9,0.9-1.5c0.301-0.599,0.151-1.126-0.075-1.575c-0.226-0.449-2.023-4.875-2.773-6.673	c-0.729-1.752-1.472-1.515-2.023-1.542c-0.524-0.027-1.123-0.03-1.722-0.03c-0.599,0-1.575,0.226-2.397,1.126	c-0.822,0.9-3.147,3.074-3.147,7.498s3.222,8.699,3.671,9.298c0.449,0.599,6.338,9.678,15.36,13.571	c2.144,0.924,3.821,1.478,5.125,1.894c2.153,0.684,4.113,0.587,5.664,0.355c1.728-0.259,5.321-2.174,6.067-4.273	c0.75-2.099,0.75-3.899,0.524-4.273C58.06,48.051,57.461,47.825,56.561,47.376z"
+        ></path>
+      </svg>
+    </a>
+  </body>
+</html>
