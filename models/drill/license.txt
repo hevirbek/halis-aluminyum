@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bosch PSR1800 LI-2
+* source:	https://sketchfab.com/3d-models/bosch-psr1800-li-2-dd14ccedba4d4ab5892e2b974ec00317
+* author:	Lassi Kaukonen (https://sketchfab.com/thesidekick)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bosch PSR1800 LI-2" (https://sketchfab.com/3d-models/bosch-psr1800-li-2-dd14ccedba4d4ab5892e2b974ec00317) by Lassi Kaukonen (https://sketchfab.com/thesidekick) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

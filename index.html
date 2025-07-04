@@ -84,6 +84,10 @@
         border-radius: 50%;
       }
     </style>
+    <!-- Three.js for 3D model -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   </head>
 
   <body
@@ -335,8 +339,67 @@
     </header>
 
     <main id="main">
-      <!-- SLIDER -->
+      <!-- Modern Hero Section -->
       <section
+        class="relative h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-gray-900 overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-black/30"></div>
+        <video
+          autoplay
+          muted
+          loop
+          class="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="assets/videos/hero.mp4" type="video/mp4" />
+        </video>
+
+        <div
+          class="relative z-10 flex items-center justify-center h-full text-center text-white"
+        >
+          <div class="max-w-4xl px-6" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              Alüminyumda <span class="text-blue-400">Kalite</span> ve
+              <span class="text-blue-400">Güven</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200">
+              25 yıllık deneyimimizle modern alüminyum çözümleri sunuyoruz
+            </p>
+            <div class="space-x-4">
+              <button
+                class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105"
+              >
+                Ürünlerimizi Keşfedin
+              </button>
+              <button
+                class="border-2 border-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-semibold transition-all"
+              >
+                İletişime Geçin
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div
+          class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+        >
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </div>
+      </section>
+      <!-- SLIDER -->
+      <!-- <section
         class="relative overflow-hidden"
         x-data="{ slide: 0, slides: ['/assets/images/slider1.jpg', '/assets/images/slider2.jpg', '/assets/images/slider3.jpeg'] }"
         x-init="setInterval(() => slide = (slide + 1) % slides.length, 4000)"
@@ -358,7 +421,7 @@
         </template>
 
         <!-- Slider Dots -->
-        <div class="flex justify-center mt-4 space-x-2">
+      <!-- <div class="flex justify-center mt-4 space-x-2">
           <template x-for="(_, index) in slides" :key="index">
             <button
               @click="slide = index"
@@ -368,7 +431,7 @@
             ></button>
           </template>
         </div>
-      </section>
+      </section>  -->
 
       <!-- MİSYON & VİZYON -->
       <section class="py-16 bg-gray-50">
@@ -378,12 +441,20 @@
           </h2>
           <div class="grid md:grid-cols-2 gap-10 items-center">
             <div class="text-center">
-              <img
-                src="/assets/images/slider1.jpg"
-                alt="Misyon"
-                class="mx-auto mb-4 rounded-lg shadow-md w-full max-w-xs"
-                loading="lazy"
-              />
+              <!-- 3D Model Container -->
+              <div
+                id="drill-model"
+                class="mx-auto mb-4 w-full max-w-xs h-64 rounded-lg shadow-md bg-gradient-to-br from-blue-50 to-gray-100 relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center"
+                  id="loading-indicator"
+                >
+                  <div
+                    class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"
+                  ></div>
+                </div>
+              </div>
               <h3 class="text-xl font-semibold mb-2">Misyonumuz</h3>
               <p class="text-gray-600">
                 Müşterilerimize yüksek kaliteli alüminyum doğrama ve cephe
@@ -392,12 +463,20 @@
               </p>
             </div>
             <div class="text-center">
-              <img
-                src="/assets/images/slider1.jpg"
-                alt="Vizyon"
-                class="mx-auto mb-4 rounded-lg shadow-md w-full max-w-xs"
-                loading="lazy"
-              />
+              <!-- Toolbox 3D Model Container -->
+              <div
+                id="toolbox-model"
+                class="mx-auto mb-4 w-full max-w-xs h-64 rounded-lg shadow-md bg-gradient-to-br from-green-50 to-blue-100 relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center"
+                  id="toolbox-loading-indicator"
+                >
+                  <div
+                    class="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"
+                  ></div>
+                </div>
+              </div>
               <h3 class="text-xl font-semibold mb-2">Vizyonumuz</h3>
               <p class="text-gray-600">
                 Yenilikçi yaklaşımlar ve müşteri odaklı hizmet anlayışıyla,
@@ -660,5 +739,6 @@
         ></path>
       </svg>
     </a>
+    <script src="main.js"></script>
   </body>
 </html>
