@@ -6,7 +6,7 @@ function initModelViewer(options) {
     fallbackImage,
     fallbackAlt,
     modelPath,
-    autoRotateSpeed = 1,
+    autoRotateSpeed = 2,
     loadingSpinnerColor = "border-gray-600",
   } = options;
 
@@ -226,8 +226,8 @@ document.addEventListener("DOMContentLoaded", function () {
       loadingIndicatorId: "loading-indicator",
       fallbackImage: "/assets/images/slider1.jpg",
       fallbackAlt: "Misyon",
-      modelPath: "/assets/models/drill/scene.gltf",
-      autoRotateSpeed: 1,
+      modelPath: "/models/compressed_drill.glb", // <-- GLB dosya yolu
+      autoRotateSpeed: 2,
       loadingSpinnerColor: "border-blue-600",
     });
 
@@ -237,8 +237,8 @@ document.addEventListener("DOMContentLoaded", function () {
       loadingIndicatorId: "toolbox-loading-indicator",
       fallbackImage: "/assets/images/slider2.jpg",
       fallbackAlt: "Vizyon",
-      modelPath: "/assets/models/toolbox/scene.gltf",
-      autoRotateSpeed: 1, // Standardized speed
+      modelPath: "/models/compressed_toolbox.glb", // <-- GLB dosya yolu
+      autoRotateSpeed: 2,
       loadingSpinnerColor: "border-green-600",
     });
   }
